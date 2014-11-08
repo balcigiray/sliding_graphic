@@ -53,6 +53,33 @@ class SlidingGraph {
   
   //this method will get the incoming data to SlidingGraph object  
   void addValue(float _value){
+    _value = adjustBoundary(_value);
+    
+    //ilk turda buraya girecek
+    if(initialCondition == true){
+      values1[arrayIndex] = _value;
+      arrayIndex++;
+      
+      if(arrayIndex == values1.length){
+        arrayIndex = 0;  
+        initialCondition = false;
+      }
+    }
+    
+    else{
+      if(isSecond == true){
+        values1[arrayIndex] = _value;    
+      }    
+      else{
+        values2[arrayIndex] = _value;
+      }
+      arrayIndex++;
+  
+      if(arrayIndex == values1.length){
+        arrayIndex = 0;
+        isSecond = !isSecond;        
+      }    
+    }
   }
   
   //this method will draw the incoming data to the screen
