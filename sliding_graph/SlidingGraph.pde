@@ -84,6 +84,36 @@ class SlidingGraph {
   
   //this method will draw the incoming data to the screen
   void drawGraph(){
+    fill(graphicColor);
+    int xCounter = posX;
+    
+    if (initialCondition == true){
+      drawInitialGraph();
+    }
+    
+    else{
+      if(isSecond == false){
+        for(int i=arrayIndex; i<values1.length; i++){
+          rect(xCounter, zeroLine, lineWidth, values1[i]);
+          xCounter += lineWidth;        
+        }
+        for(int i=0; i<arrayIndex; i++){
+          rect(xCounter, zeroLine, lineWidth, values2[i]);
+          xCounter += lineWidth;
+        }
+      }
+      
+      else{
+        for(int i=arrayIndex; i<values2.length; i++){
+          rect(xCounter, zeroLine, lineWidth, values2[i]);
+          xCounter += lineWidth;        
+        }
+        for(int i=0; i<arrayIndex; i++){
+          rect(xCounter, zeroLine, lineWidth, values1[i]);
+          xCounter += lineWidth;
+        }
+      }
+    }   
   }
 
   //this method will create the 2 arrays which will be used in the object
