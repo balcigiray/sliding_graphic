@@ -70,7 +70,10 @@ class SlidingGraph {
   
   //adjusts the incoming data for constraint area
   private float adjustBoundary(float _data){
-    return _data;
+    zeroLine = parseInt(lengthY/2);
+    _data = map(_data, lowLimit, highLimit, -zeroLine, zeroLine);    
+    zeroLine += posY;    
+    return -_data;
   }
   
   //since first loop of the draw is different from rest. This method is required
