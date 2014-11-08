@@ -78,6 +78,9 @@ class SlidingGraph {
   
   //since first loop of the draw is different from rest. This method is required
   private void drawInitialGraph(){
+    for(int i=0; i<values1.length; i++){
+      rect(lineWidth*i+posX, zeroLine, lineWidth, values1[i]);
+    }  
   }
 
 }
