@@ -36,6 +36,21 @@ class SlidingGraph {
     initializeArrays();
   }
   
+//override method is for optional line width adjustment
+  SlidingGraph(int _posX, int _posY, int _lengthX, int _lengthY, float _lowLimit, float _highLimit, int _lineWidth){
+    posX = _posX;
+    posY = _posY;
+    lengthX = _lengthX;
+    lengthY = _lengthY; 
+    highLimit = _highLimit;
+    lowLimit = _lowLimit;
+    lineWidth = _lineWidth;     
+    arrayIndex = 0;
+    graphicColor = color(0);
+    
+    initializeArrays();
+  }
+  
   //this method will get the incoming data to SlidingGraph object  
   void addValue(float _value){
   }
