@@ -62,6 +62,10 @@ class SlidingGraph {
   //this method will create the 2 arrays which will be used in the object
   //width of the graph and bar width is important in the method
   private void initializeArrays(){
+    int size = parseInt(lengthX/lineWidth);
+
+    values1 = new float[size];
+    values2 = new float[size];  
   }
   
   //adjusts the incoming data for constraint area
