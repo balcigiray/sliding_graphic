@@ -1,3 +1,15 @@
+ /*constructor contains 6 or 7 variables
+  *(a,b,c,d,e,f) or (a,b,c,d,e,f,g)
+  *
+  *a: x coordinate of the graph upper left corner
+  *b: y coordinate of the graph upper left corner
+  *c: width of the graph
+  *d: height of the graph
+  *e: lower limit of the input data
+  *f: higher limit of the input data
+  *g: width of the individual graphic bars
+  */
+
 class SlidingGraph {
   
 //global variables
