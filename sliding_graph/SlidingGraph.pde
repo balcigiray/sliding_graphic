@@ -55,7 +55,7 @@ class SlidingGraph {
   void addValue(float _value){
     _value = adjustBoundary(_value);
     
-    //ilk turda buraya girecek
+    //program enters here at first starting
     if(initialCondition == true){
       values1[arrayIndex] = _value;
       arrayIndex++;
