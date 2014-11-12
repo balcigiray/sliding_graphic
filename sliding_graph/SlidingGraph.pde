@@ -34,11 +34,11 @@ class SlidingGraph {
 //constructor
 //first 4 variables are same as the rect() function. position and size.
 //last 2 variables are for limits
-  SlidingGraph(int _posX, int _posY, int _lengthX, int _lengthY, float _lowLimit, float _highLimit){
-    posX = _posX;
-    posY = _posY;
-    lengthX = _lengthX;
-    lengthY = _lengthY; 
+  SlidingGraph(float _posX, float _posY, float _lengthX, float _lengthY, float _lowLimit, float _highLimit){
+    posX = parseInt(_posX);
+    posY = parseInt(_posY);
+    lengthX = parseInt(_lengthX);
+    lengthY = parseInt(_lengthY); 
     highLimit = _highLimit;
     lowLimit = _lowLimit;
     lineWidth = 5; //default bar width  
@@ -49,11 +49,11 @@ class SlidingGraph {
   }
   
 //override method is for optional line width adjustment
-  SlidingGraph(int _posX, int _posY, int _lengthX, int _lengthY, float _lowLimit, float _highLimit, int _lineWidth){
-    posX = _posX;
-    posY = _posY;
-    lengthX = _lengthX;
-    lengthY = _lengthY; 
+  SlidingGraph(float _posX, float _posY, float _lengthX, float _lengthY, float _lowLimit, float _highLimit, int _lineWidth){
+    posX = parseInt(_posX);
+    posY = parseInt(_posY);
+    lengthX = parseInt(_lengthX);
+    lengthY = parseInt(_lengthY); 
     highLimit = _highLimit;
     lowLimit = _lowLimit;
     lineWidth = _lineWidth;     
